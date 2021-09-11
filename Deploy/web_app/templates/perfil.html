@@ -1,0 +1,74 @@
+{%extends 'base.html'%}
+{% block title%}
+Perfil
+{% endblock %}
+
+{% block content%}
+<body>
+<h2>Perfil:  {{indice_perfil}}</h2>
+<h5>{{perfil_final}}</h5>
+<h5>Recomendamos a seguinte carteira de Cryptoativos:<p></p></h5>
+
+
+    <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <!--Your columns HERE-->
+                    <th scope="col">Ativo</th>
+                    <th scope="col">Peso %</th>
+                    <th scope="col">Link</th>
+                    <th scope="col">Descrição</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                {% for crypto,peso in dict_portfolio.items() %}
+                        <tr>
+                            <td>{{crypto}}</td>
+                            <td>{{peso*100}}</td>
+                            
+                        </tr>
+                    
+                {% endfor %}
+            </tbody>
+        </table>
+</body>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Carteira 2</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        {% for key, value in dict_portfolio_legenda.items() %}
+                {% if value is string %}
+                    ['{{ key }}', '{{ value }}'],
+            {% else %}
+                        ['{{ key }}', {{ value }}],
+            {% endif %}
+        {% endfor %}
+        ]);
+
+        var options = {
+            title: 'Perfil: {{indice_perfil}}',
+            pieHole: 0.5,
+            backgroundColor:'grey',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+	<div style="margin: 10px 0 0 10px;width: 1000px">
+		<h3>Carteira</h3>
+		
+		<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+	</div>
+</body>
+{%endblock%}

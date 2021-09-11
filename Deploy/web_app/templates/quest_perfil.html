@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% block title %}
+Perfil page
+{% endblock %}
+{%block content%}
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+					"width=device-width, initial-scale=1.0">
+	
+	<style>
+
+					/* Styling the Body element i.e. Color,
+					Font, Alignment */
+					body {
+									background-color: #05c46b;
+									font-family: Verdana;
+									text-align: left;
+					}
+
+					/* Styling the Form (Color, Padding, Shadow) */
+					form {
+									background-color: rgb(255, 255, 255);
+									max-width: auto;
+									margin:  300px;
+									padding: 15px 15px;
+									box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
+									
+					}
+
+					/* Styling form-control Class */
+					.form-control {
+									text-align: left;
+									margin-bottom: 250px;
+					}
+
+					/* Styling form-control Label */
+					.form-control label {
+									display: block;
+									margin-bottom: 5px;
+
+					}
+					
+					/* Styling form-control input,
+					select, textarea */
+					.form-control input,
+					.form-control select,
+					.form-control textarea {
+									border: 1px solid #777;
+									border-radius: 2px;
+									font-family: inherit;
+									padding: 10px;
+									display: block;
+									width: 95%;
+					}
+
+					/* Styling form-control Radio
+					button and Checkbox */
+					.form-control input[type="radio"]
+					 {
+									display: inline-block;
+									width: auto;
+					}
+
+					/* Styling Button */
+					button {
+									background-color: #05c46b;
+									border: 1px solid #777;
+									border-radius: 2px;
+									font-family: inherit;
+									font-size: 21px;
+									display: block;
+									width: 100%;
+									margin-top: 50px;
+									margin-bottom: 20px;
+					}
+	</style>
+</head>
+
+<body>
+    <h1>Vamos descobrir o seu perfil:</h1>
+
+<form action = "/quest_perfil" method="POST">
+	<div class="form-control">
+		<label><text>
+			1 - Qual sua finalidade ao investir seu dinheiro:</text>
+		</label>
+
+		<label>
+      <input type="radio"  name="p1"  value=1 required="required" checked> Preservar patrimônio assumindo um risco menor.</input>
+       </label>
+							<label>
+      <input type="radio"  name="p1"  value=2 required="required"> Uma combinação entre preservação do meu patrimônio e sua valorização.</input>
+      </label>
+						<label>
+	<input type="radio"  name="p1"  value=3 required="required"> Maximizar o potencial de ganho assumindo um risco maior.</input>
+						</label>
+					</div>
+ 
+
+	
+			<div class="form-control">
+
+	<label>
+	2 - Tá entrando na crypto, ok. Porém em quanto tempo você acha que vai precisar dessa grana?
+</label>
+
+      <label><input type="radio"  name="p3"  value="1" required="required" checked> Preciso desse dinheiro como complemento de renda.</input>
+						</label>
+      <label><input type="radio"  name="p3"  value="2" required="required"> Eventualmente posso precisar utilizar uma parte dele.</input></label>
+      <label><input type="radio"  name="p3"  value="3" required="required"> Não tenho necessidade imediata desse dinheiro.</input></label>
+    </div>
+
+
+	
+	<div class="form-control">
+
+<label>
+	3 - Qual percentual da sua renda você pretende investir?
+</label>
+      <label><input type="radio"  name="p5"  value="1" required="required" checked> Até 10%.</input></label>
+      <label><input type="radio"  name="p5"  value="2" required="required"> De 10% a 20%.</input> </label>
+      <label> <input type="radio"  name="p5"  value="3" required="required"> De 20% a 50%.</input></label>
+      <label><input type="radio"  name="p5"  value="4" required="required"> Acima de 50%.</input>  
+      <label></label>
+					</div>
+    
+	<div class="form-control">
+
+<label>
+	 4 - Por conta de oscilações do mercado, considere que seus investimentos percam 10% do valor aplicado.
+		<p>Neste caso, o que o (a) Sr.(a) faria?</p>
+	</label>
+    
+      <label><input type="radio"  name="p6"  value="1" required="required" checked>Não sei o que faria.</input> </label>
+		<label><input type="radio"  name="p6"  value="2" required="required">Venderia toda a posição.</input> </label>
+		<label><input type="radio"  name="p6"  value="3" required="required">Manteria a posição.</input> </label>
+		<label><input type="radio"  name="p6"  value="4" required="required">Aumentaria a posição.</input> </label>
+					</div>
+
+				<div class="form-control">
+
+<label>
+	5 - Quais dos produtos listados abaixo você tem familiaridade?
+</label>
+	 <label><input type="radio"  name="p7"  value="1" required="required" checked> Poupança, Fundos DI, CDB, Fundos de Renda Fixa.</input></label>
+     <label><input type="radio"  name="p7"  value="2" required="required"> Fundos Multimercados, Títulos Públicos, LCI, LCA.</input></label>
+     <label><input type="radio"  name="p7"  value="3" required="required"> Fundos de Ações, Ações, Fundos Imobiliários, Debêntures, Fundos Cambiais, Clubes de Investimento.</input></label>
+     <label><input type="radio"  name="p7"  value="4" required="required"> Fundos de Investimentos em Participações (FIP), Derivativos (Futuros, Opções e Swaps).</input>
+     <label></label></div>
+
+
+
+<div class="form-control">
+
+<label>
+	6 - Na atual composição dos seus investimentos, qual investimento tem maior participação na carteira?
+</label>
+     <label><input type="radio"  name="p9"  value="1" required="required" checked>Imóveis.</input></label>
+     <label><input type="radio"  name="p9"  value="2" required="required">Renda Fixa (Fundos de Renda Fixa, DI, CDBs, Poupança).</input></label>
+     <label><input type="radio"  name="p9"  value="3" required="required">Fundos de Investimento Multimercado.</input></label>
+     <label><input type="radio"  name="p9"  value="4" required="required">Renda Variável (Ações e Fundos de Ações).</input></label>
+     <label><input type="radio"  name="p9"  value="5" required="required">Outros.</input></label>
+
+				</div>
+  
+
+	<div class="form-control">
+<label>
+	7 - Qual das respostas abaixo mais se assemelha à sua personalidade como investidor?
+</label>     
+	 <label><input type="radio"  name="p12"  value="1" required="required" checked> Não admito perder nada do capital investido. Procuro um retorno seguro e sem oscilações. Segurança é mais importante do que rentabilidade.</input></label>
+     <label><input type="radio"  name="p12"  value="2" required="required"> Não admito perder nada do capital investido, no entanto posso arriscar uma parte do capital para alcançar resultados melhores que a renda fixa tradicional. Valorizo mais a segurança do que a rentabilidade.</input></label>
+     <label><input type="radio"  name="p12"  value="3" required="required"> Posso correr riscos para conseguir uma rentabilidade acima da média, no entanto, prezo a preservação de 100% do capital investido. Divido minhas preferências entre segurança e rentabilidade, mas ainda prefiro segurança à rentabilidade.</input></label>
+     <label><input type="radio"  name="p12"  value="4" required="required"> Admito perdas de até 20% do capital investido, se a proposta de investimento gerar possibilidade de altos retornos. A procura por rentabilidade é mais importante do que a segurança.</input></label>
+     <label><input type="radio"  name="p12"  value="5" required="required"> Minha prioridade é maximizar a rentabilidade, com a segurança em segundo plano. Posso correr grande riscos para obter elevados retornos, admitindo perder mais de 20% do meu capital investido.</input></label>
+	</div>
+				
+<button type="submit" >Enviar</button>
+
+
+</body>
+{%endblock%}
