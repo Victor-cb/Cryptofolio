@@ -4,14 +4,13 @@ import requests
 from flask_restful import Resource, Api
 from pandas.io.parsers import read_csv
 import json
-#from gerador_portfolios import gera_portfolios
 
 
 app = Flask(__name__)
 api = Api(app)
 
 
-@app.route('/', methods = ['GET'])
+@app.route('/get_portfolios', methods = ['GET'])
 def get_portfolios():
         
     df_portfolios_escolhidos = pd.read_csv("dataframes/df_portfolios_escolhidos.csv", index_col=0)
@@ -25,8 +24,8 @@ def get_portfolios():
     return df_portfolios_escolhidos_json
 
 
-@app.route('/teste', methods = ['GET', 'POST'])
-def teste_portfolios():
+@app.route('/update_portfolios', methods = ['GET', 'POST'])
+def update_portfolios():
 
     from gerador_portfolios import gera_portfolios
 
