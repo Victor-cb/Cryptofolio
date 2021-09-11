@@ -300,5 +300,5 @@ def gera_portfolios(lista_ativos, df_retornos, lista_pesos, n_componentes, n_ite
 
 
 gera_portfolios(lista_ativos=ativos, df_retornos = df_retornos, lista_pesos=lista_pesos, n_componentes=n_componentes, n_iter=n_iter)
-#df_portfolios = 
+
 
