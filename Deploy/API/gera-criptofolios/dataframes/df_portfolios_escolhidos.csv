@@ -1,0 +1,6 @@
+,pesos,cryptos,indicador
+Conservador,"[0.4, 0.4, 0.05, 0.1, 0.05]","['BTC-USD', 'USDT-USD', 'MIOTA-USD', 'LINK-USD', 'FIL-USD']",risco_min
+Moderado,"[0.3, 0.15, 0.35, 0.1, 0.1]","['DASH-USD', 'USDT-USD', 'BNB-USD', 'TRX-USD', 'FIL-USD']",sharpe_max
+Dinâmico,"[0.3, 0.15, 0.35, 0.1, 0.1]","['DASH-USD', 'USDT-USD', 'BNB-USD', 'TRX-USD', 'FIL-USD']",sortino_max
+Arrojado,"[0.05, 0.35, 0.05, 0.35, 0.2]","['USDT-USD', 'MKR-USD', 'ADA-USD', 'FIL-USD', 'THETA-USD']",roys_safety_max
+Agressivo,"[0.1, 0.05, 0.4, 0.4, 0.05]","['DASH-USD', 'XLM-USD', 'MKR-USD', 'FIL-USD', 'THETA-USD']",retorno_max
