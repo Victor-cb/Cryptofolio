@@ -47,7 +47,7 @@ def quest_perfil_page():
     else:
        perfil_final = "Apetite altissímo ao risco AKA, CHUCK NORRIS: YOLO, Você é uma pessoa que aceita e entende que 'com grandes poderes, vem grandes perdas', Uncle Ben. Mas vamos combinar, caso fique milionário, me chama pro churras. Mas se perder tudo amanhã, não chama a mamãe."
        indice_perfil ="Agressivo"
-    portfolios = requests.get("")
+    portfolios = requests.get("https://gera-criptofolios.herokuapp.com/")
     portfolio_dict=portfolios.json()
     lista_peso_raw =portfolio_dict[indice_perfil]["pesos"]
     lista_peso = re.findall('[\-\+]?[0-9]*(\.[0-9]+)',lista_peso_raw)
