@@ -1,1 +1,0 @@
-,Ativo,Close,Volume,1: ln(C/C-1),2: ln(C-1/C-2),3: ln(C-2/C-3),4: ln(C-3/C-4),5: ln(H/O),6: ln(H/O-1),7: ln(H/O-2),8: ln(H/O-3),9: ln(H-1/O-1),10: ln(H-2/O-2),11: ln(H-3/O-3),12: ln(L/O),13: ln(L-1/O-1),14: ln(L-2/O-2),15: ln(L-3/O-3),16: True Range,17: ATR 5d,17: ATR 3d,19: RSI 5d,18: MI 3d,20: ln(Vol/Vol-1),21: ln(Vol-1/Vol-2)
