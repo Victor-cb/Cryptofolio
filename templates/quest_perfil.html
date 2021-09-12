@@ -14,25 +14,24 @@ Perfil page
 					/* Styling the Body element i.e. Color,
 					Font, Alignment */
 					body {
-									background-color: #05c46b;
 									font-family: Verdana;
-									text-align: left;
+									text-align: center;
 					}
 
 					/* Styling the Form (Color, Padding, Shadow) */
 					form {
 									background-color: rgb(255, 255, 255);
 									max-width: auto;
-									margin:  300px;
-									padding: 15px 15px;
-									box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.5);
+									margin:  50px 400px;
+									padding: auto;
+									box-shadow: auto rgba(0, 0, 0, 0.5);
 									
 					}
 
 					/* Styling form-control Class */
 					.form-control {
 									text-align: left;
-									margin-bottom: 250px;
+									margin-bottom: 260px;
 					}
 
 					/* Styling form-control Label */
@@ -83,17 +82,16 @@ Perfil page
 
 <form action = "/quest_perfil" method="POST">
 	<div class="form-control">
-		<label><text>
-			1 - Qual sua finalidade ao investir seu dinheiro:</text>
-		</label>
-
-		<label>
+	<label><text>
+		1 - Qual sua finalidade ao investir seu dinheiro:</text>
+	</label>
+<label>
       <input type="radio"  name="p1"  value=1 required="required" checked> Preservar patrimônio assumindo um risco menor.</input>
-       </label>
-							<label>
+      </label>
+	  <label>
       <input type="radio"  name="p1"  value=2 required="required"> Uma combinação entre preservação do meu patrimônio e sua valorização.</input>
       </label>
-						<label>
+	  <label>
 	<input type="radio"  name="p1"  value=3 required="required"> Maximizar o potencial de ganho assumindo um risco maior.</input>
 						</label>
 					</div>
@@ -129,8 +127,7 @@ Perfil page
 	<div class="form-control">
 
 <label>
-	 4 - Por conta de oscilações do mercado, considere que seus investimentos percam 10% do valor aplicado.
-		<p>Neste caso, o que o (a) Sr.(a) faria?</p>
+	 4 - Esse é um mercado que oscila bastante, imagine que você perdeu 10% do que investiu. O que você faria?
 	</label>
     
       <label><input type="radio"  name="p6"  value="1" required="required" checked>Não sei o que faria.</input> </label>

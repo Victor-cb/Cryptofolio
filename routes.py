@@ -78,7 +78,7 @@ def get_portfolios():
     return df_portfolios_escolhidos_json
 
 
-@app.route('/update_portfolios', methods = ['GET', 'POST'])
+@app.route('/update_portfolios', methods = ['GET'])
 def update_portfolios():
 
     from gerador_portfolios import gera_portfolios
