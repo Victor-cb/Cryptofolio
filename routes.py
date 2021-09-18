@@ -63,7 +63,7 @@ def quest_perfil_page():
        perfil_final = "Apetite altissímo ao risco AKA, CHUCK NORRIS: YOLO, Você é uma pessoa que aceita e entende que 'com grandes poderes, vem grandes perdas', Uncle Ben. Mas vamos combinar, caso fique milionário, me chama pro churras. Mas se perder tudo amanhã, não chama a mamãe."
        indice_perfil ="Agressivo"
     #buscando os 5 portfolio do JSON criado no gerador_portfolios.py
-    portfolios = requests.get("https://criptofolio.herokuapp.com/get_portfolios")
+    portfolios = requests.get("http://127.0.0.1:5000/get_portfolios")#https://criptofolio.herokuapp.com/get_portfolios
     portfolio_dict=portfolios.json()
     # Selecionando o portfolio que foi adequado ao questionário
     lista_peso_raw =portfolio_dict[indice_perfil]["pesos"]
@@ -76,8 +76,7 @@ def quest_perfil_page():
     dict_portfolio_legenda={}
     #Add Description from csv and Link
     df = pd.read_csv('dados/df_eligible.csv')
-    df['link']=df['description'].str.extract(r'(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\
-    [a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})')
+    df['link']=df['description'].str.extract(r'(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9][com|org|io|info|link|network|tech.]{1,})')
     dict_description = dict(zip(df.ticker,df.description))
     dict_link =  dict(zip(df.ticker,df.link))
     dic_final_desc = {}

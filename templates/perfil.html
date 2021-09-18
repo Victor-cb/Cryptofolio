@@ -4,6 +4,66 @@ Perfil
 {% endblock %}
 
 {% block content%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+                                "width=device-width, initial-scale=1.0">
+
+    <style>
+
+        /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body {
+                        font-family: Verdana;
+                        text-align: center;
+        }
+
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+                        
+                        max-width: auto;
+                        margin:  50px 400px;
+                        padding: 50px;
+                        display: flex;
+                        flex-direction:column;
+                        
+        }
+
+       /* Styling form-control Class */
+        .form-control {
+                        border:10px;
+                        display: flex;
+                        flex-direction: column;
+                        height: auto;
+                        text-align: left;
+        }
+
+        /* Styling form-control Label */
+        .form_control_top_label {   
+            border: 1px solid #777;
+            border-radius: 2px;               
+        }
+
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+                        font-family: inherit;
+                        padding: 50px;
+                        display: block;
+                        width: 95%;
+        }
+        {
+        
+        }
+      
+    </style>
+</head>
+
+
+
 <body>
 <h2>Perfil:  {{indice_perfil}}</h2>
 <h5>{{perfil_final}}</h5>
@@ -27,7 +87,7 @@ Perfil
                         <tr>
                             <td>{{crypto}}</td>
                             <td>{{peso*100}}</td>
-                            <td>{{dic_link[crypto]}}</td>
+                            <td><a href="{{dic_link[crypto]}}" target="_blank">{{dic_link[crypto]}}</a> </td>
                             <td>{{dic_final_desc[crypto]}}</td>
                             
                         </tr>
@@ -58,7 +118,7 @@ Perfil
         var options = {
             title: 'Perfil: {{indice_perfil}}',
             pieHole: 0.5,
-            backgroundColor:'grey',
+            backgroundColor:'default',
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
@@ -67,10 +127,10 @@ Perfil
     </script>
 </head>
 <body>
-	<div style="margin: 10px 0 0 10px;width: 1000px">
+	<div style="margin: 10px 0 0 10px;width: center">
 		<h3>Carteira</h3>
 		
-		<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+		<div id="piechart_3d" style="width: center; height: 450px;"></div>
 	</div>
 </body>
 {%endblock%}
