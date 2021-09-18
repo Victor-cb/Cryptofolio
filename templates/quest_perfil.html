@@ -23,22 +23,29 @@ Perfil page
                         background-color: rgb(255, 255, 255);
                         max-width: auto;
                         margin:  50px 400px;
-                        padding: auto;
-                        box-shadow: auto rgba(0, 0, 0, 0.5);
+                        padding: 20px;
+                        display: flex;
+                        flex-direction:column;
                         
+        }
+
+        label{
+
         }
 
         /* Styling form-control Class */
         .form-control {
+                        border:0px;
+                        display: flex;
+                        flex-direction: column;
+                        height: auto;
                         text-align: left;
-                        margin-bottom: 260px;
         }
 
         /* Styling form-control Label */
-        .form-control label {
-                        display: block;
-                        margin-bottom: 5px;
-
+        .form_control_top_label {   
+            border: 1px solid #777;
+            border-radius: 2px;               
         }
 
         /* Styling form-control input,
@@ -46,8 +53,6 @@ Perfil page
         .form-control input,
         .form-control select,
         .form-control textarea {
-                        border: 1px solid #777;
-                        border-radius: 2px;
                         font-family: inherit;
                         padding: 10px;
                         display: block;
@@ -79,8 +84,7 @@ Perfil page
 
     <body>
         <h1>Vamos descobrir o seu perfil:</h1>
-
-            <form action = "/quest_perfil" method="POST">
+            <form action = "/quest_perfil" method="POST" class="form">
                 <div class="form-control">
                     <label><text>
                     1 - Qual sua finalidade ao investir seu dinheiro:</text>
@@ -130,10 +134,10 @@ Perfil page
                     4 - Esse é um mercado que oscila bastante, imagine que você perdeu 10% do que investiu. O que você faria?
                     </label>
 
-                    <label><input type="radio"  name="p6"  value="1" required="required" checked>Não sei o que faria.</input> </label>
-                    <label><input type="radio"  name="p6"  value="2" required="required">Venderia toda a posição.</input> </label>
-                    <label><input type="radio"  name="p6"  value="3" required="required">Manteria a posição.</input> </label>
-                    <label><input type="radio"  name="p6"  value="4" required="required">Aumentaria a posição.</input> </label>
+                    <label><input type="radio"  name="p6"  value="1" required="required" checked> Não sei o que faria.</input> </label>
+                    <label><input type="radio"  name="p6"  value="2" required="required"> Venderia toda a posição.</input> </label>
+                    <label><input type="radio"  name="p6"  value="3" required="required"> Manteria a posição.</input> </label>
+                    <label><input type="radio"  name="p6"  value="4" required="required"> Aumentaria a posição.</input> </label>
                 </div>
 
                 <div class="form-control">
@@ -151,11 +155,11 @@ Perfil page
                     <label>
                     6 - Na atual composição dos seus investimentos, qual investimento tem maior participação na carteira?
                     </label>
-                    <label><input type="radio"  name="p9"  value="1" required="required" checked>Imóveis.</input></label>
-                    <label><input type="radio"  name="p9"  value="2" required="required">Renda Fixa (Fundos de Renda Fixa, DI, CDBs, Poupança).</input></label>
-                    <label><input type="radio"  name="p9"  value="3" required="required">Fundos de Investimento Multimercado.</input></label>
-                    <label><input type="radio"  name="p9"  value="4" required="required">Renda Variável (Ações e Fundos de Ações).</input></label>
-                    <label><input type="radio"  name="p9"  value="5" required="required">Outros.</input></label>
+                    <label><input type="radio"  name="p9"  value="1" required="required" checked> Imóveis.</input></label>
+                    <label><input type="radio"  name="p9"  value="2" required="required"> Renda Fixa (Fundos de Renda Fixa, DI, CDBs, Poupança).</input></label>
+                    <label><input type="radio"  name="p9"  value="3" required="required"> Fundos de Investimento Multimercado.</input></label>
+                    <label><input type="radio"  name="p9"  value="4" required="required"> Renda Variável (Ações e Fundos de Ações).</input></label>
+                    <label><input type="radio"  name="p9"  value="5" required="required"> Outros.</input></label>
 
                 </div>
 
@@ -170,8 +174,8 @@ Perfil page
                     <label><input type="radio"  name="p12"  value="4" required="required"> Admito perdas de até 20% do capital investido, se a proposta de investimento gerar possibilidade de altos retornos. A procura por rentabilidade é mais importante do que a segurança.</input></label>
                     <label><input type="radio"  name="p12"  value="5" required="required"> Minha prioridade é maximizar a rentabilidade, com a segurança em segundo plano. Posso correr grande riscos para obter elevados retornos, admitindo perder mais de 20% do meu capital investido.</input></label>
                 </div>
-
                 <button type="submit" >Enviar</button>
+            </form>
 
 
 </body>
