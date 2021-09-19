@@ -57,7 +57,7 @@ def quest_perfil_page():
        perfil_final = "Apetite altissímo ao risco AKA, CHUCK NORRIS: YOLO, Você é uma pessoa que aceita e entende que 'com grandes poderes, vem grandes perdas', Uncle Ben. Mas vamos combinar, caso fique milionário, me chama pro churras. Mas se perder tudo amanhã, não chama a mamãe."
        indice_perfil ="Agressivo"
     #buscando os 5 portfolio do JSON criado no gerador_portfolios.py
-    portfolios = requests.get("http://127.0.0.1:5000/get_portfolios")#https://criptofolio.herokuapp.com/get_portfolios
+    portfolios = requests.get("https://criptofolio.herokuapp.com/get_portfolios")#https://criptofolio.herokuapp.com/get_portfolios
     portfolio_dict=portfolios.json()
     # Selecionando o portfolio que foi adequado ao questionário
     lista_peso_raw =portfolio_dict[indice_perfil]["pesos"]
