@@ -1,8 +1,301 @@
 {% extends 'base.html' %}
 {% block title %}
-Seu Perfil
+Home Page
 {% endblock %}
 {%block content%}
-{{test}}
-{{perfil}}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url('https://image.shutterstock.com/shutterstock/photos/683818258/display_1500/stock-photo-set-of-cryptocurrencies-with-a-golden-bitcoin-on-the-front-as-the-leader-bitcoin-as-most-important-683818258.jpg');
+  min-height: 45%;
+}
+
+.menu {
+  display: none;
+}
+
+       /* Styling form-control Class */
+        .form-control {
+                        border:0px;
+                        display: flex;
+                        flex-direction: column;
+                        height: auto;
+                        text-align: left;
+        }
+
+        /* Styling form-control Label */
+        .form_control_top_label {   
+            border: 1px solid #777;
+            border-radius: 2px;               
+        }
+
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+                        font-family: inherit;
+                        padding: 10px;
+                        display: block;
+                        width: 95%;
+        }
+
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"]
+            {
+                        display: inline-block;
+                        width: auto;
+        }
+
+        /* Styling Button */
+        button {
+                        background-color: #05c46b;
+                        border: 1px solid #777;
+                        border-radius: 2px;
+                        font-family: inherit;
+                        font-size: 21px;
+                        display: block;
+                        width: 100%;
+                        margin-top: 50px;
+                        margin-bottom: 20px;
+        }
+</style>
+<body>
+
+<!-- Links (sit on top) 
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+  </div>
+</div>
+-->
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Projeto em caráter experimental</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-yellow" style="font-size:100px">Cryptofolio</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-yellow"><a  href="https://www.digitalhouse.com/br/" target="_blank">Digital House</a> Data Science Projeto Integrador</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">O que é o Cryptofolio</span></h5>
+    <p>Cryptofolio é um projeto cientifico que visa a aplicação de Inteligência Artificial para prever o comportamento de Cryptoativos.</p>
+    <p>A partir desse comportamento futuro, utilizamos métricas financeiras para criar portfólios que contém cinco ativos baseados no seu <a href="{{ url_for('perfil') }}"> perfil de investidor</a>.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>Atenção, este é um projeto ciéntifico de formação no curso de Data Science pela Digital House. Qualquer perda financeira atrelada a carteira de investimento proposta é de responsabilidade do usuário.</i></p>
+      <p>Equipe Cryptofolio </p>
+    </div>
+    <!--
+    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>-->
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Vamos descobrir o seu perfil</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Perfil');" id="myLink">
+        <div class="w3-col s6 tablink ">Perfil</div>
+      </a>
+      
+     <!-- <a href="javascript:void(0)" onclick="openMenu(event, 'Portfolio');">
+        <div class="w3-col s6 tablink">Portfolio</div>
+      </a>-->
+    </div>
+    <body>
+<form action = "/quest_perfil" method="POST" class="form">
+        <div class="form-control">
+            <label><text>
+            1 - Qual sua finalidade ao investir seu dinheiro:</text>
+            </label>
+            <label>
+            <input type="radio"  name="p1"  value=1 required="required" checked> Preservar patrimônio assumindo um risco menor.</input>
+            </label>
+            <label>
+            <input type="radio"  name="p1"  value=2 required="required"> Uma combinação entre preservação do meu patrimônio e sua valorização.</input>
+            </label>
+            <label>
+            <input type="radio"  name="p1"  value=3 required="required"> Maximizar o potencial de ganho assumindo um risco maior.</input>
+            </label>
+        </div>
+        <div class="form-control">
+
+            <label>
+        2 - Tá entrando na crypto, ok. Porém em quanto tempo você acha que vai precisar dessa grana?
+        </label>
+
+        <label><input type="radio"  name="p3"  value="1" required="required" checked> Preciso desse dinheiro como complemento de renda.</input>
+            </label>
+        <label><input type="radio"  name="p3"  value="2" required="required"> Eventualmente posso precisar utilizar uma parte dele.</input></label>
+        <label><input type="radio"  name="p3"  value="3" required="required"> Não tenho necessidade imediata desse dinheiro.</input></label>        
+    </div>
+
+
+
+    <div class="form-control">
+
+        <label>
+        3 - Qual percentual da sua renda você pretende investir?
+        </label>
+        <label><input type="radio"  name="p5"  value="1" required="required" checked> Até 10%.</input></label>
+        <label><input type="radio"  name="p5"  value="2" required="required"> De 10% a 20%.</input> </label>
+        <label> <input type="radio"  name="p5"  value="3" required="required"> De 20% a 50%.</input></label>
+        <label><input type="radio"  name="p5"  value="4" required="required"> Acima de 50%.</input>  
+        <label></label>
+    </div>
+
+    <div class="form-control">
+
+        <label>
+        4 - Esse é um mercado que oscila bastante, imagine que você perdeu 10% do que investiu. O que você faria?
+        </label>
+
+        <label><input type="radio"  name="p6"  value="1" required="required" checked> Não sei o que faria.</input> </label>
+        <label><input type="radio"  name="p6"  value="2" required="required"> Venderia toda a posição.</input> </label>
+        <label><input type="radio"  name="p6"  value="3" required="required"> Manteria a posição.</input> </label>
+        <label><input type="radio"  name="p6"  value="4" required="required"> Aumentaria a posição.</input> </label>
+    </div>
+
+    <div class="form-control">
+
+        <label>
+        5 - Quais dos produtos listados abaixo você tem familiaridade?
+        </label>
+        <label><input type="radio"  name="p7"  value="1" required="required" checked> Poupança, Fundos DI, CDB, Fundos de Renda Fixa.</input></label>
+        <label><input type="radio"  name="p7"  value="2" required="required"> Fundos Multimercados, Títulos Públicos, LCI, LCA.</input></label>
+        <label><input type="radio"  name="p7"  value="3" required="required"> Fundos de Ações, Ações, Fundos Imobiliários, Debêntures, Fundos Cambiais, Clubes de Investimento.</input></label>
+        <label><input type="radio"  name="p7"  value="4" required="required"> Fundos de Investimentos em Participações (FIP), Derivativos (Futuros, Opções e Swaps).</input>
+        <label></label></div>
+
+    <div class="form-control">
+        <label>
+        6 - Na atual composição dos seus investimentos, qual investimento tem maior participação na carteira?
+        </label>
+        <label><input type="radio"  name="p9"  value="1" required="required" checked> Imóveis.</input></label>
+        <label><input type="radio"  name="p9"  value="2" required="required"> Renda Fixa (Fundos de Renda Fixa, DI, CDBs, Poupança).</input></label>
+        <label><input type="radio"  name="p9"  value="3" required="required"> Fundos de Investimento Multimercado.</input></label>
+        <label><input type="radio"  name="p9"  value="4" required="required"> Renda Variável (Ações e Fundos de Ações).</input></label>
+        <label><input type="radio"  name="p9"  value="5" required="required"> Outros.</input></label>
+
+    </div>
+
+
+    <div class="form-control">
+        <label>
+        7 - Qual das respostas abaixo mais se assemelha à sua personalidade como investidor?
+        </label>     
+        <label><input type="radio"  name="p12"  value="1" required="required" checked> Não admito perder nada do capital investido. Procuro um retorno seguro e sem oscilações. Segurança é mais importante do que rentabilidade.</input></label>
+        <label><input type="radio"  name="p12"  value="2" required="required"> Não admito perder nada do capital investido, no entanto posso arriscar uma parte do capital para alcançar resultados melhores que a renda fixa tradicional. Valorizo mais a segurança do que a rentabilidade.</input></label>
+        <label><input type="radio"  name="p12"  value="3" required="required"> Posso correr riscos para conseguir uma rentabilidade acima da média, no entanto, prezo a preservação de 100% do capital investido. Divido minhas preferências entre segurança e rentabilidade, mas ainda prefiro segurança à rentabilidade.</input></label>
+        <label><input type="radio"  name="p12"  value="4" required="required"> Admito perdas de até 20% do capital investido, se a proposta de investimento gerar possibilidade de altos retornos. A procura por rentabilidade é mais importante do que a segurança.</input></label>
+        <label><input type="radio"  name="p12"  value="5" required="required"> Minha prioridade é maximizar a rentabilidade, com a segurança em segundo plano. Posso correr grande riscos para obter elevados retornos, admitindo perder mais de 20% do meu capital investido.</input></label>
+    </div>
+    <button type="submit" >Enviar</button>
+</form>
+    </body>
+<!--
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">Regular coffee 2.50</p><br>
+    
+      <h5>Chocolato</h5>
+      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+    
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+    
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+    
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+    </div>  
+    <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+    -->
+  </div>
+</div>
+
+
+<!-- Contact/Area Container 
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+-->
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="{{url_for('about_us_page')}}" title="W3.CSS" target="_blank" class="w3-hover-text-green">Cryptofolio</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
 {%endblock%}

@@ -16,7 +16,7 @@ Perfil
         Font, Alignment */
         body {
                         font-family: Verdana;
-                        text-align: center;
+                        text-align: center ;
         }
 
         /* Styling the Form (Color, Padding, Shadow) */
@@ -55,9 +55,26 @@ Perfil
                         display: block;
                         width: 95%;
         }
-        {
-        
-        }
+        h2 {
+            display: block;
+            font-size: 2em;
+            margin-top: 0.67em;
+            margin-bottom: 0.67em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold;
+            }
+            h5 {
+            display: block;
+            font-size: 1em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 15em;
+            margin-right: 15em;
+            font-weight: bold;
+
+            }
+      
       
     </style>
 </head>
@@ -66,11 +83,11 @@ Perfil
 
 <body>
 <h2>Perfil:  {{indice_perfil}}</h2>
-<h5>{{perfil_final}}</h5>
+<h4>{{perfil_final}}</h4>
 <h5>Recomendamos a seguinte carteira de Cryptoativos:<p></p></h5>
 
 
-    <table class="table table-hover table-dark">
+    <table class="table table-hover table-light" style="color: black; background-color: rgb(236, 235, 235);">
             <thead>
                 <tr>
                     <!--Your columns HERE-->
@@ -85,10 +102,10 @@ Perfil
             <tbody>
                 {% for crypto,peso in dict_portfolio.items() %}
                         <tr>
-                            <td>{{crypto}}</td>
-                            <td>{{peso*100}}</td>
-                            <td><a href="{{dic_link[crypto]}}" target="_blank">{{dic_link[crypto]}}</a> </td>
-                            <td>{{dic_final_desc[crypto]}}</td>
+                            <td style="width:10%">{{crypto}}</td>
+                            <td style="width:10%">{{peso*100}}</td>
+                            <td style="width:20%"><a href="{{dic_link[crypto]}}" target="_blank">{{dic_link[crypto]}}</a> </td>
+                            <td style="width:70%">{{dic_final_desc[crypto]}}</td>
                             
                         </tr>
                     
@@ -116,7 +133,7 @@ Perfil
         ]);
 
         var options = {
-            title: 'Perfil: {{indice_perfil}}',
+            title: "Perfil:{{indice_perfil}}" ,
             pieHole: 0.5,
             backgroundColor:'default',
         };

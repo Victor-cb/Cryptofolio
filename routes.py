@@ -11,26 +11,20 @@ app = Flask(__name__)
 #Endpoint Main - Direto no questionário do perfil
 @app.route('/')
 def perfil_questions():
-    return render_template('quest_perfil.html')
+    return render_template('home.html')
 
 #Perfil Home, onde vamos explicar e apresentar o projeto.
 @app.route('/home')
 def home_page():
-    return render_template('home.html')
+   return render_template('home.html')
 
 #Página sobre a equipe que realizou o projeto
 @app.route('/about_us')
 def about_us_page():
     return render_template('about_us.html')
-
-#Primeira tentativa de resgatar dados do questionario - Falha. 
-"""@app.route('/perfil')
-def perfil_page():
-    if request.method == 'POST':
-        print(request.form.getlist('radio'))
-        return 'Done'
-    return render_template('perfil.html')"""
-
+@app.route('/perfil')
+def perfil():
+    return render_template('quest_perfil.html')
 #Aqui será a rota onde após pegar todos os dados do questionário, vamos criar a página de portfolio.
 @app.route('/quest_perfil',methods = ['POST'])
 def quest_perfil_page():
@@ -48,7 +42,7 @@ def quest_perfil_page():
     produto = np.multiply(pesos,resposta_forms)
     nota_perfil = sum(produto)
     if nota_perfil <= 52:
-        perfil_final = "Aversão muito alta a risco: Você é uma pessoa tipicamente conservadora, é do tipo que mesmo com um sol gigante, consulta a meteorologia antes de sair de casa. Já que sua grana tá embaixo do colchão ou na poupança,vai devagar e sempre com crypto"
+        perfil_final = "Oi MÁRIO! Aversão muito alta a risco: Você é uma pessoa tipicamente conservadora, é do tipo que mesmo com um sol gigante, consulta a meteorologia antes de sair de casa. Já que sua grana tá embaixo do colchão ou na poupança,vai devagar e sempre com crypto"
         indice_perfil = "Conservador"   
     elif nota_perfil <= 65:
         perfil_final ="Vamos pular de paraquedas? Não, mas eu vou no avião pra ver, vai que dá vontade: Você normalmente usa a razão para tomar suas decisões, mas tem sempre aquele diabinho falando no seu ouvido. Não se iluda, as cryptos são esse diabinho."
