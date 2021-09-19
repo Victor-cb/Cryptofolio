@@ -70,7 +70,7 @@ def quest_perfil_page():
     dict_portfolio_legenda={}
     #Add Description from csv and Link
     df = pd.read_csv('dados/df_eligible.csv')
-    df['link']=df['description'].str.extract(r'(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9][com|org|io|info|link|network|tech.]{1,})')
+    #df['link']=df['description'].str.extract(r'(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9][com|org|io|info|link|network|tech.]{1,})')
     dict_description = dict(zip(df.ticker,df.description))
     dict_link =  dict(zip(df.ticker,df.link))
     dic_final_desc = {}
