@@ -102,10 +102,10 @@ Perfil
             <tbody>
                 {% for crypto,peso in dict_portfolio.items() %}
                         <tr>
-                            <td style="width:10%">{{crypto}}</td>
-                            <td style="width:10%">{{peso*100}}</td>
-                            <td style="width:20%"><a href="{{dic_link[crypto]}}" target="_blank">{{dic_link[crypto]}}</a> </td>
-                            <td style="width:40%">{{dic_final_desc[crypto]}}</td>
+                            <td style="width:10%; vertical-align:middle ;">{{crypto}}</td>
+                            <td style="width:10% ; vertical-align:middle;">{{peso*100}}</td>
+                            <td style="width:15% ; vertical-align:middle;"><a href="{{dic_link[crypto]}}" target="_blank">{{dic_link[crypto]}}</a> </td>
+                            <td style="width:60% ; vertical-align:middle; font-size: 12px;">{{dic_final_desc[crypto]}}</td>
                             
                         </tr>
                     
