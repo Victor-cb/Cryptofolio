@@ -97,7 +97,7 @@ body, html {
     <span class="w3-tag">Projeto em caráter experimental</span>
   </div>
   <div class="w3-display-middle w3-center">
-    <span class="w3-text-yellow" style="font-size:100px; position: relative;right:auto;;bottom: -190px;" >Cryptofolio</span>
+    <span class="w3-text-yellow" style="font-size:95px; position: relative;right:auto;bottom: 200px;" >Criptofolio</span>
   </div>
   <div class="w3-display-bottomright w3-center w3-padding-large">
     <span class="w3-text-yellow"><a  href="https://www.digitalhouse.com/br/" target="_blank">Digital House</a> - Data Science Projeto Integrador</span>
@@ -110,12 +110,12 @@ body, html {
 <!-- About Container -->
 <div class="w3-container" id="about">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">O que é o Cryptofolio</span></h5>
-    <p>Cryptofolio é um projeto cientifico que visa a aplicação de Inteligência Artificial para prever o comportamento de Cryptoativos.</p>
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">O que é o Criptofolio</span></h5>
+    <p>Criptofolio é um projeto cientifico que visa a aplicação de Inteligência Artificial para prever o comportamento de Cryptoativos.</p>
     <p>A partir desse comportamento futuro, utilizamos métricas financeiras para criar portfólios que contém cinco ativos baseados no seu <a href="{{ url_for('perfil') }}"> perfil de investidor</a>.</p>
     <div class="w3-panel w3-leftbar w3-light-grey">
       <p><i>Atenção, este é um projeto ciéntifico de formação no curso de Data Science pela Digital House. Qualquer perda financeira atrelada a carteira de investimento proposta é de responsabilidade do usuário.</i></p>
-      <p>Equipe Cryptofolio </p>
+      <p>Equipe Criptofolio </p>
     </div>
     <!--
     <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
@@ -143,7 +143,7 @@ body, html {
 <form action = "/quest_perfil" method="POST" class="form">
         <div class="form-control">
             <label><text>
-            1 - Qual sua finalidade ao investir seu dinheiro:</text>
+            <b>1 - Qual sua finalidade ao investir seu dinheiro:</b></text>
             </label>
             <label>
             <input type="radio"  name="p1"  value=1 required="required" checked> Preservar patrimônio assumindo um risco menor.</input>
@@ -158,7 +158,7 @@ body, html {
         <div class="form-control">
 
             <label>
-        2 - Tá entrando na crypto, ok. Porém em quanto tempo você acha que vai precisar dessa grana?
+        <b>2 - Tá entrando na crypto, ok. Porém em quanto tempo você acha que vai precisar dessa grana?</b>
         </label>
 
         <label><input type="radio"  name="p3"  value="1" required="required" checked> Preciso desse dinheiro como complemento de renda.</input>
@@ -172,7 +172,7 @@ body, html {
     <div class="form-control">
 
         <label>
-        3 - Qual percentual da sua renda você pretende investir?
+        <b>3 - Qual percentual da sua renda você pretende investir?</b>
         </label>
         <label><input type="radio"  name="p5"  value="1" required="required" checked> Até 10%.</input></label>
         <label><input type="radio"  name="p5"  value="2" required="required"> De 10% a 20%.</input> </label>
@@ -184,7 +184,7 @@ body, html {
     <div class="form-control">
 
         <label>
-        4 - Esse é um mercado que oscila bastante, imagine que você perdeu 10% do que investiu. O que você faria?
+        <b>4 - Esse é um mercado que oscila bastante, imagine que você perdeu 10% do que investiu. O que você faria?</b>
         </label>
 
         <label><input type="radio"  name="p6"  value="1" required="required" checked> Não sei o que faria.</input> </label>
@@ -196,7 +196,7 @@ body, html {
     <div class="form-control">
 
         <label>
-        5 - Quais dos produtos listados abaixo você tem familiaridade?
+        <b>5 - Quais dos produtos listados abaixo você tem familiaridade?</b>
         </label>
         <label><input type="radio"  name="p7"  value="1" required="required" checked> Poupança, Fundos DI, CDB, Fundos de Renda Fixa.</input></label>
         <label><input type="radio"  name="p7"  value="2" required="required"> Fundos Multimercados, Títulos Públicos, LCI, LCA.</input></label>
@@ -206,7 +206,7 @@ body, html {
 
     <div class="form-control">
         <label>
-        6 - Na atual composição dos seus investimentos, qual investimento tem maior participação na carteira?
+        <b>6 - Na atual composição dos seus investimentos, qual investimento tem maior participação na carteira?</b>
         </label>
         <label><input type="radio"  name="p9"  value="1" required="required" checked> Imóveis.</input></label>
         <label><input type="radio"  name="p9"  value="2" required="required"> Renda Fixa (Fundos de Renda Fixa, DI, CDBs, Poupança).</input></label>
@@ -219,7 +219,7 @@ body, html {
 
     <div class="form-control">
         <label>
-        7 - Qual das respostas abaixo mais se assemelha à sua personalidade como investidor?
+        <b>7 - Qual das respostas abaixo mais se assemelha à sua personalidade como investidor?</b>
         </label>     
         <label><input type="radio"  name="p12"  value="1" required="required" checked> Não admito perder nada do capital investido. Procuro um retorno seguro e sem oscilações. Segurança é mais importante do que rentabilidade.</input></label>
         <label><input type="radio"  name="p12"  value="2" required="required"> Não admito perder nada do capital investido, no entanto posso arriscar uma parte do capital para alcançar resultados melhores que a renda fixa tradicional. Valorizo mais a segurança do que a rentabilidade.</input></label>
@@ -276,7 +276,7 @@ body, html {
 
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-  <p>Powered by <a href="{{url_for('about_us_page')}}" title="W3.CSS" target="_blank" class="w3-hover-text-green">Cryptofolio</a></p>
+  <p>Powered by <a href="{{url_for('about_us_page')}}" title="W3.CSS" target="_blank" class="w3-hover-text-green">Criptofolio</a></p>
 </footer>
 
 <script>
