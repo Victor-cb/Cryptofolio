@@ -3,4 +3,132 @@
 Sobre nós
 {% endblock %}
 {%block content%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+                                "width=device-width, initial-scale=1.0">
+
+    <style>
+
+        /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body, html {
+            height: 100%;
+            font-family: "Inconsolata", sans-serif;
+            text-align: center;
+            background-color: #fdf5e6!important;    
+        }
+
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+                        
+                        max-width: auto;
+                        margin:  50px 400px;
+                        padding: 50px;
+                        display: flex;
+                        flex-direction:column;
+                        
+        }
+
+       /* Styling form-control Class */
+        .container {
+            display: grid;
+            grid-row-gap: 40px;
+            grid-column-gap: 15%;
+            grid-template-columns: repeat(auto-fit, 400px);
+            border-width: 0px;
+            font-size: 12pt;
+            background-color: #fdf5e6!important;    
+        }
+
+        .card{
+            display: flex;
+            flex-direction: row;
+            background-color: #fdf5e6!important;  
+            border-width: 0px;
+        }
+
+      img{
+          border-radius: 50%;
+          width:100px;
+      }
+      .card-info{
+          margin:5px;
+          flex-direction: column;
+          justify-content: left;
+          align-items: flex-start;
+      }
+      label{
+          margin:0px
+      }
+      
+    </style>
+</head>
+  
+<body>
+    <h1>Equipe Cryptofolio</h1>
+<div class="container">
+    <div class="card">
+        <img src="https://github.com/victorlima090.png">
+        <div class="card card-info">
+            <label>Victor</label>
+            <label>victorlima090@gmail.com</label>
+            <a href="https://github.com/victorlima090">https://github.com/victorlima090</a>
+            <a href="https://github.com/victorlima090">https://github.com/victorlima090</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://github.com/Victor-cb.png">
+        <div class="card card-info">
+            <label>Victor Costa Brito</label>
+            <label>brito.victorc@gmaill.com</label>
+            <a href="https://www.linkedin.com/in/victorcbrito/">https://www.linkedin.com/in/victorcbrito/</a>
+            <a href="https://github.com/Victor-cb">https://github.com/Victor-cb</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://github.com/JuhCampos.png">
+        <div class="card card-info">
+            <label>Juliana Santos Campos</label>
+            <label>juliana.scampos90@gmaill.com</label>
+            <a href="https://www.linkedin.com/in/julianacamposengdeproducao/">https://www.linkedin.com/in/julianacamposengdeproducao/</a>
+            <a href="https://github.com/JuhCampos">https://github.com/JuhCampos</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://github.com/Wagowe.png">
+        <div class="card card-info">
+            <label>Alexandre Azevedo</label>
+            <label>alexandrelazevedo@gmaill.com</label>
+            <a href="https://www.linkedin.com/in/alexandreaz/">https://www.linkedin.com/in/alexandreaz/</a>
+            <a href="https://github.com/Wagowe">https://github.com/Wagowe</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://github.com/gcosta22.png">
+        <div class="card card-info">
+            <label>Guilherme Costa</label>
+            <label>costaguilhermea2@gmaill.com</label>
+            <a href="https://www.linkedin.com/in/guilherme-costa-economist/">https://www.linkedin.com/in/guilherme-costa-economist/</a>
+            <a href="https://github.com/gcosta22">https://github.com/gcosta22</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://github.com/victorlima090.png">
+        <div class="card card-info">
+            <label>Victor</label>
+            <label>victorlima090@gmail.com</label>
+            <a href="https://github.com/victorlima090">https://github.com/victorlima090</a>
+            <a href="https://github.com/victorlima090">https://github.com/victorlima090</a>
+        </div>
+    </div>
+
+</div>
+</body>
 {%endblock%}
