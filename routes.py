@@ -42,7 +42,7 @@ def quest_perfil_page():
     produto = np.multiply(pesos,resposta_forms)
     nota_perfil = sum(produto)
     if nota_perfil <= 52:
-        perfil_final = "Oi MÁRIO! Aversão muito alta a risco: Você é uma pessoa tipicamente conservadora, é do tipo que mesmo com um sol gigante, consulta a meteorologia antes de sair de casa. Já que sua grana tá embaixo do colchão ou na poupança,vai devagar e sempre com crypto"
+        perfil_final = "Aversão muito alta a risco: Você é uma pessoa tipicamente conservadora, é do tipo que mesmo com um sol gigante, consulta a meteorologia antes de sair de casa. Já que sua grana tá embaixo do colchão ou na poupança,vai devagar e sempre com crypto"
         indice_perfil = "Conservador"   
     elif nota_perfil <= 65:
         perfil_final ="Vamos pular de paraquedas? Não, mas eu vou no avião pra ver, vai que dá vontade: Você normalmente usa a razão para tomar suas decisões, mas tem sempre aquele diabinho falando no seu ouvido. Não se iluda, as cryptos são esse diabinho."
